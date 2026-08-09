@@ -8,13 +8,23 @@ class Cloudcosttree < Formula
   license :cannot_represent
 
   on_macos do
-    url Hardware::CPU.arm? ? "https://github.com/rulssss/cloudcosttree/releases/download/v0.1.36/cloudcosttree-darwin-arm64" : "https://github.com/rulssss/cloudcosttree/releases/download/v0.1.36/cloudcosttree-darwin-amd64"
-    sha256 Hardware::CPU.arm? ? "9b82dcc315c1bb21261890fdc2b4b53ae1cd9128005096ced4e068bc248a69a8" : "d68a5db22b3d1f00f787df1ff141994bf7a70cf25cb124b3b23b79d9161cbf31"
+    if Hardware::CPU.arm?
+      url "https://github.com/rulssss/cloudcosttree/releases/download/v0.1.36/cloudcosttree-darwin-arm64"
+      sha256 "9b82dcc315c1bb21261890fdc2b4b53ae1cd9128005096ced4e068bc248a69a8"
+    else
+      url "https://github.com/rulssss/cloudcosttree/releases/download/v0.1.36/cloudcosttree-darwin-amd64"
+      sha256 "d68a5db22b3d1f00f787df1ff141994bf7a70cf25cb124b3b23b79d9161cbf31"
+    end
   end
 
   on_linux do
-    url Hardware::CPU.arm? ? "https://github.com/rulssss/cloudcosttree/releases/download/v0.1.36/cloudcosttree-linux-arm64" : "https://github.com/rulssss/cloudcosttree/releases/download/v0.1.36/cloudcosttree-linux-amd64"
-    sha256 Hardware::CPU.arm? ? "e77fb111e752f0227754d99aaafb5a7b868878491473a65549ee4bf6def591c1" : "94136765233f3827561a055cf1a03d632091650131ccd239f33e29c01846fe72"
+    if Hardware::CPU.arm?
+      url "https://github.com/rulssss/cloudcosttree/releases/download/v0.1.36/cloudcosttree-linux-arm64"
+      sha256 "e77fb111e752f0227754d99aaafb5a7b868878491473a65549ee4bf6def591c1"
+    else
+      url "https://github.com/rulssss/cloudcosttree/releases/download/v0.1.36/cloudcosttree-linux-amd64"
+      sha256 "94136765233f3827561a055cf1a03d632091650131ccd239f33e29c01846fe72"
+    end
   end
 
   # The bundled price catalog (see the main repo's README: "data/prices.json

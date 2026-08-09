@@ -15,22 +15,22 @@ REPO="rulssss/cloudcosttree"
 FORMULA="Formula/cloudcosttree.rb"
 
 TMPDIR=$(mktemp -d)
-trap 'rm -rf "${TMPDIR}"' EXIT
+trap 'rm -rf "$TMPDIR"' EXIT
 
 sha() {
   local asset="$1"
-  curl -fsSL -o "${TMPDIR}/${asset}" "https://github.com/${REPO}/releases/download/v${VERSION}/${asset}"
-  shasum -a 256 "${TMPDIR}/${asset}" | awk '{print $1}'
+  curl -fsSL -o "$TMPDIR/$asset" "https://github.com/$REPO/releases/download/v$VERSION/$asset"
+  shasum -a 256 "$TMPDIR/$asset" | awk '{print $1}'
 }
 
-echo "Fetching assets for v${VERSION}..."
+echo "Fetching assets for v$VERSION..."
 DARWIN_ARM64_SHA=$(sha cloudcosttree-darwin-arm64)
 DARWIN_AMD64_SHA=$(sha cloudcosttree-darwin-amd64)
 LINUX_ARM64_SHA=$(sha cloudcosttree-linux-arm64)
 LINUX_AMD64_SHA=$(sha cloudcosttree-linux-amd64)
 PRICES_SHA=$(sha prices.json)
 
-cat >"${FORMULA}" <<EOF
+cat >"$FORMULA" <<EOF
 class Cloudcosttree < Formula
   desc "Estimate AWS infrastructure costs in a hierarchical tree before you apply"
   homepage "https://cloudcosttree.com"
@@ -41,13 +41,23 @@ class Cloudcosttree < Formula
   license :cannot_represent
 
   on_macos do
-    url Hardware::CPU.arm? ? "https://github.com/${REPO}/releases/download/v${VERSION}/cloudcosttree-darwin-arm64" : "https://github.com/${REPO}/releases/download/v${VERSION}/cloudcosttree-darwin-amd64"
-    sha256 Hardware::CPU.arm? ? "${DARWIN_ARM64_SHA}" : "${DARWIN_AMD64_SHA}"
+    if Hardware::CPU.arm?
+      url "https://github.com/$REPO/releases/download/v$VERSION/cloudcosttree-darwin-arm64"
+      sha256 "$DARWIN_ARM64_SHA"
+    else
+      url "https://github.com/$REPO/releases/download/v$VERSION/cloudcosttree-darwin-amd64"
+      sha256 "$DARWIN_AMD64_SHA"
+    end
   end
 
   on_linux do
-    url Hardware::CPU.arm? ? "https://github.com/${REPO}/releases/download/v${VERSION}/cloudcosttree-linux-arm64" : "https://github.com/${REPO}/releases/download/v${VERSION}/cloudcosttree-linux-amd64"
-    sha256 Hardware::CPU.arm? ? "${LINUX_ARM64_SHA}" : "${LINUX_AMD64_SHA}"
+    if Hardware::CPU.arm?
+      url "https://github.com/$REPO/releases/download/v$VERSION/cloudcosttree-linux-arm64"
+      sha256 "$LINUX_ARM64_SHA"
+    else
+      url "https://github.com/$REPO/releases/download/v$VERSION/cloudcosttree-linux-amd64"
+      sha256 "$LINUX_AMD64_SHA"
+    end
   end
 
   # The bundled price catalog (see the main repo's README: "data/prices.json
@@ -64,8 +74,8 @@ class Cloudcosttree < Formula
   # box" point of bundling it. This is a personal tap, not a homebrew-core
   # submission, so this style warning doesn't block anything.
   resource "prices" do
-    url "https://github.com/${REPO}/releases/download/v${VERSION}/prices.json"
-    sha256 "${PRICES_SHA}"
+    url "https://github.com/$REPO/releases/download/v$VERSION/prices.json"
+    sha256 "$PRICES_SHA"
   end
 
   def install
@@ -81,6 +91,6 @@ class Cloudcosttree < Formula
 end
 EOF
 
-echo "Updated ${FORMULA} to v${VERSION}. Review the diff, then:"
-echo "  brew install --build-from-source ${FORMULA} && brew test rulssss/cloudcosttree/cloudcosttree"
-echo "  git commit -am 'cloudcosttree v${VERSION}' && git push"
+echo "Updated $FORMULA to v$VERSION. Review the diff, then:"
+echo "  brew install --build-from-source $FORMULA && brew test rulssss/cloudcosttree/cloudcosttree"
+echo "  git commit -am 'cloudcosttree v$VERSION' && git push"
