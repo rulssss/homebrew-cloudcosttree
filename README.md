@@ -1,16 +1,23 @@
-# Rulssss Cloudcosttree
+# CloudCostTree Homebrew tap
 
-## How do I install these formulae?
+Homebrew tap for [CloudCostTree](https://cloudcosttree.com)'s `cloudcosttree`
+CLI — estimate AWS infrastructure costs in a hierarchical tree before you
+apply. See [rulssss/cloudcosttree](https://github.com/rulssss/cloudcosttree)
+for the CLI itself.
 
-`brew install rulssss/cloudcosttree/<formula>`
+## Install
 
-Or `brew tap rulssss/cloudcosttree` and then `brew install <formula>`.
+```sh
+brew install rulssss/cloudcosttree/cloudcosttree
+```
+
+Or `brew tap rulssss/cloudcosttree` and then `brew install cloudcosttree`.
 
 Or, in a `brew bundle` `Brewfile`:
 
 ```ruby
 tap "rulssss/cloudcosttree"
-brew "<formula>"
+brew "cloudcosttree"
 ```
 
 ## Documentation
