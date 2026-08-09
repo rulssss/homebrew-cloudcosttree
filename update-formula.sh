@@ -30,7 +30,7 @@ LINUX_ARM64_SHA=$(sha cloudcosttree-linux-arm64)
 LINUX_AMD64_SHA=$(sha cloudcosttree-linux-amd64)
 PRICES_SHA=$(sha prices.json)
 
-cat > "$FORMULA" <<EOF
+cat >"$FORMULA" <<EOF
 class Cloudcosttree < Formula
   desc "Estimate AWS infrastructure costs in a hierarchical tree before you apply"
   homepage "https://cloudcosttree.com"
