@@ -9,21 +9,21 @@ class Cloudcosttree < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/rulssss/cloudcosttree/releases/download/v0.1.41/cloudcosttree-darwin-arm64"
-      sha256 "6bd32c481611f757f04274d7074696ddb54bb989bcc5e2be804091ef27adfa28"
+      url "https://github.com/rulssss/cloudcosttree/releases/download/v0.1.42/cloudcosttree-darwin-arm64"
+      sha256 "1cb3232bfae45d9f500fbde6365d3dfc55133c628fa92f283e8e2faeda509b4a"
     else
-      url "https://github.com/rulssss/cloudcosttree/releases/download/v0.1.41/cloudcosttree-darwin-amd64"
-      sha256 "b4915e2cedfe1121ba12402513a5ffb3bbcd81ab74f766e41675ceb97dac0e40"
+      url "https://github.com/rulssss/cloudcosttree/releases/download/v0.1.42/cloudcosttree-darwin-amd64"
+      sha256 "d2b7385c5415499a92a40461adce198e23d482c1589a482881e3c49e219cd27d"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/rulssss/cloudcosttree/releases/download/v0.1.41/cloudcosttree-linux-arm64"
-      sha256 "19c9aa143cda3513fde29e337d75cb5623606d912cc57a706e17daf599ceef84"
+      url "https://github.com/rulssss/cloudcosttree/releases/download/v0.1.42/cloudcosttree-linux-arm64"
+      sha256 "7d51c13cf4d1d21db2189ec695f7bd00db1e10e19830f1a0e1b42fe6c4f29307"
     else
-      url "https://github.com/rulssss/cloudcosttree/releases/download/v0.1.41/cloudcosttree-linux-amd64"
-      sha256 "5fbbfdeaf5d76f96443368a55958a28f9eac9a9dc4e74b6be420488925b6f4eb"
+      url "https://github.com/rulssss/cloudcosttree/releases/download/v0.1.42/cloudcosttree-linux-amd64"
+      sha256 "46168799af44e4dc9f2654763c8350cce3aaa3c394502c49c327ceb4bf66b8be"
     end
   end
 
@@ -41,7 +41,7 @@ class Cloudcosttree < Formula
   # box" point of bundling it. This is a personal tap, not a homebrew-core
   # submission, so this style warning doesn't block anything.
   resource "prices" do
-    url "https://github.com/rulssss/cloudcosttree/releases/download/v0.1.41/prices.json"
+    url "https://github.com/rulssss/cloudcosttree/releases/download/v0.1.42/prices.json"
     sha256 "f76bf3b154ea69fd0115db5ef414fe648590f138b306c497718d8fcb4ae5bc6c"
   end
 
