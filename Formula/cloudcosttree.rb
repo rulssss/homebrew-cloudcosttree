@@ -9,20 +9,20 @@ class Cloudcosttree < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/rulssss/cloudcosttree/releases/download/v0.1.50/cloudcosttree-darwin-arm64"
+      url "https://github.com/rulssss/cloudcosttree/releases/download/v0.1.51/cloudcosttree-darwin-arm64"
       sha256 "20a4d513607dbe123d52fd038109fc4132aabdfdc7f951a546bcac329b3b22be"
     else
-      url "https://github.com/rulssss/cloudcosttree/releases/download/v0.1.50/cloudcosttree-darwin-amd64"
+      url "https://github.com/rulssss/cloudcosttree/releases/download/v0.1.51/cloudcosttree-darwin-amd64"
       sha256 "1adf9f4eda25f832090cac10d53597ac664027182a5ed6243a74c8f92b36602f"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/rulssss/cloudcosttree/releases/download/v0.1.50/cloudcosttree-linux-arm64"
+      url "https://github.com/rulssss/cloudcosttree/releases/download/v0.1.51/cloudcosttree-linux-arm64"
       sha256 "ad7fe4d3754a3eb2f365dfc87b4167b9b44cdef8807b142d27c11aec88d2509d"
     else
-      url "https://github.com/rulssss/cloudcosttree/releases/download/v0.1.50/cloudcosttree-linux-amd64"
+      url "https://github.com/rulssss/cloudcosttree/releases/download/v0.1.51/cloudcosttree-linux-amd64"
       sha256 "d54828dbe31d7eb968b6a7c23585543bd686375e95649ff4496f341ea3073c5b"
     end
   end
@@ -41,7 +41,7 @@ class Cloudcosttree < Formula
   # box" point of bundling it. This is a personal tap, not a homebrew-core
   # submission, so this style warning doesn't block anything.
   resource "prices" do
-    url "https://github.com/rulssss/cloudcosttree/releases/download/v0.1.50/prices.json"
+    url "https://github.com/rulssss/cloudcosttree/releases/download/v0.1.51/prices.json"
     sha256 "628ad4fb9e298f1dcebdf7795dfd98b397cab1d13a4a268d5bbae7810dfd1cee"
   end
 
