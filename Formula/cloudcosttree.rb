@@ -9,21 +9,21 @@ class Cloudcosttree < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/rulssss/cloudcosttree/releases/download/v0.1.65/cloudcosttree-darwin-arm64"
-      sha256 "f0346291d853e63e520f269ac7f15739924408a86cc0501b25533677b4572522"
+      url "https://github.com/rulssss/cloudcosttree/releases/download/v0.1.66/cloudcosttree-darwin-arm64"
+      sha256 "c899be603b36a6cb16e751e784a1c12a7615eb0fc451f21588a7072a0885fc9d"
     else
-      url "https://github.com/rulssss/cloudcosttree/releases/download/v0.1.65/cloudcosttree-darwin-amd64"
-      sha256 "822e65dd2afb344654feec328f9a4cb424296c3ad936da5bf407ccf541b23ca0"
+      url "https://github.com/rulssss/cloudcosttree/releases/download/v0.1.66/cloudcosttree-darwin-amd64"
+      sha256 "4d765321e414a1c26fabef7101eadfa30c11fc23a9c8b554c613abdbcee95458"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/rulssss/cloudcosttree/releases/download/v0.1.65/cloudcosttree-linux-arm64"
-      sha256 "e071f846b13124420fe4239dc7f687ecfedaf63919287df7f9bac33760ae53e8"
+      url "https://github.com/rulssss/cloudcosttree/releases/download/v0.1.66/cloudcosttree-linux-arm64"
+      sha256 "4f02a4e0403e1674ade3e6991cca2f7688e6579105f19280595f60c3a35a2187"
     else
-      url "https://github.com/rulssss/cloudcosttree/releases/download/v0.1.65/cloudcosttree-linux-amd64"
-      sha256 "058611c2f48efdad98574aaba623c71f394702c4b1e28684174e6dbff853a278"
+      url "https://github.com/rulssss/cloudcosttree/releases/download/v0.1.66/cloudcosttree-linux-amd64"
+      sha256 "e0d0ef243c8cddfd71397cedd774b978bd27f4c6d525790e8a00c9ac1e810f06"
     end
   end
 
@@ -41,8 +41,8 @@ class Cloudcosttree < Formula
   # box" point of bundling it. This is a personal tap, not a homebrew-core
   # submission, so this style warning doesn't block anything.
   resource "prices" do
-    url "https://github.com/rulssss/cloudcosttree/releases/download/v0.1.65/prices.json"
-    sha256 "d3d9d14789d870b51659f1124c1a5c5331cf8bf88fb6434207186f7cd85b29c5"
+    url "https://github.com/rulssss/cloudcosttree/releases/download/v0.1.66/prices.json"
+    sha256 "1fb241982df30f4870776c74173f4a03a2138cef55ca39bc69fdc2e0cec439ab"
   end
 
   def install
