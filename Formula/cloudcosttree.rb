@@ -9,21 +9,21 @@ class Cloudcosttree < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/rulssss/cloudcosttree/releases/download/v0.1.68/cloudcosttree-darwin-arm64"
-      sha256 "9243d859eb31bd9329f6f96265a894297f67213bfa93f9fb1111ec9564656bd2"
+      url "https://github.com/rulssss/cloudcosttree/releases/download/v0.2.0/cloudcosttree-darwin-arm64"
+      sha256 "8f2b979131499cea0a63695b6b80b1375d87e790087cf32c796bab1e37fc74a0"
     else
-      url "https://github.com/rulssss/cloudcosttree/releases/download/v0.1.68/cloudcosttree-darwin-amd64"
-      sha256 "6f43a383de455eefe65bf028ccc38e4cf852c7b42a8b94e11453db043dd4e0a1"
+      url "https://github.com/rulssss/cloudcosttree/releases/download/v0.2.0/cloudcosttree-darwin-amd64"
+      sha256 "fd82576fcc544a024ecf9b143a5612bdd69db2a5407b4145610a3941e478e61c"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/rulssss/cloudcosttree/releases/download/v0.1.68/cloudcosttree-linux-arm64"
-      sha256 "38f9f508d000cd9401937ac3eb62ee0a5b1e39d153e7e18beb6a533d0e8c7a00"
+      url "https://github.com/rulssss/cloudcosttree/releases/download/v0.2.0/cloudcosttree-linux-arm64"
+      sha256 "d1c63d7b429341f1dd82f3cb07c250c40449c170e9ede2d8ec9e949005d7db6b"
     else
-      url "https://github.com/rulssss/cloudcosttree/releases/download/v0.1.68/cloudcosttree-linux-amd64"
-      sha256 "452b1a05ef233201c87ec8aa81a95afe28580ee7c565003d72c5ca366a5790ad"
+      url "https://github.com/rulssss/cloudcosttree/releases/download/v0.2.0/cloudcosttree-linux-amd64"
+      sha256 "d2a7566855fec3a50ddb478a14e7c0baa5b4168ee6bc4863f4af65a087c167de"
     end
   end
 
@@ -41,7 +41,7 @@ class Cloudcosttree < Formula
   # box" point of bundling it. This is a personal tap, not a homebrew-core
   # submission, so this style warning doesn't block anything.
   resource "prices" do
-    url "https://github.com/rulssss/cloudcosttree/releases/download/v0.1.68/prices.json"
+    url "https://github.com/rulssss/cloudcosttree/releases/download/v0.2.0/prices.json"
     sha256 "ffc8da83c2202a3ada0d97912f7d919508e8a2f2da83e7f2182b68914556273e"
   end
 
