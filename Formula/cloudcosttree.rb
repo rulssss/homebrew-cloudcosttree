@@ -9,21 +9,21 @@ class Cloudcosttree < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/rulssss/cloudcosttree/releases/download/v0.2.9/cloudcosttree-darwin-arm64"
-      sha256 "e7fbad94cb6bdf6dd49e908282570be2022cce5aaec2bdd6c75565ad19a71f54"
+      url "https://github.com/rulssss/cloudcosttree/releases/download/v0.2.10/cloudcosttree-darwin-arm64"
+      sha256 "efbc4a46adf04cfdf256f2ecfac5f7ad441b54fdcb5559520d7411e63a7d3525"
     else
-      url "https://github.com/rulssss/cloudcosttree/releases/download/v0.2.9/cloudcosttree-darwin-amd64"
-      sha256 "c9d65ea86b48b0dc319844b1fe9eadc37cf7dfca15398d60d92655a5f37194db"
+      url "https://github.com/rulssss/cloudcosttree/releases/download/v0.2.10/cloudcosttree-darwin-amd64"
+      sha256 "b50a60aac0cbb1eee56425347269d917dc3ca5b458c1365efd7d136b125414ae"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/rulssss/cloudcosttree/releases/download/v0.2.9/cloudcosttree-linux-arm64"
-      sha256 "816a71e2e933d3269f38c3cf3dc1b435c0d9dd29674750726ba2526604b03951"
+      url "https://github.com/rulssss/cloudcosttree/releases/download/v0.2.10/cloudcosttree-linux-arm64"
+      sha256 "541703f1ed9f4a06e3dcaf2a2a4dc9f33f2faf89ac3ded0b6b2890f5c5df87ab"
     else
-      url "https://github.com/rulssss/cloudcosttree/releases/download/v0.2.9/cloudcosttree-linux-amd64"
-      sha256 "ad390dc7c5e180e28b01f28fff4a30b5e93a52245527125fab7647503ea6a4bd"
+      url "https://github.com/rulssss/cloudcosttree/releases/download/v0.2.10/cloudcosttree-linux-amd64"
+      sha256 "48953d752ea363403fd9706450f69b440a9c832c2a3f9ee49eb57457bb3805d6"
     end
   end
 
@@ -41,7 +41,7 @@ class Cloudcosttree < Formula
   # box" point of bundling it. This is a personal tap, not a homebrew-core
   # submission, so this style warning doesn't block anything.
   resource "prices" do
-    url "https://github.com/rulssss/cloudcosttree/releases/download/v0.2.9/prices.json"
+    url "https://github.com/rulssss/cloudcosttree/releases/download/v0.2.10/prices.json"
     sha256 "8dfee9802980a3bb5eada583bd359688d6420f9e871c812b0de73d9ff341a70b"
   end
 
